@@ -41,6 +41,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
             viewHolder.tvSource = view.findViewById(R.id.source_tv);
             viewHolder.tvTime = view.findViewById(R.id.time_tv);
             viewHolder.ivDelete = view.findViewById(R.id.delete_news_item);
+            viewHolder.ivDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mNewsData.remove(position);
+                    notifyDataSetChanged();
+                }
+            });
             view.setTag(viewHolder);
         } else {
             view = convertView;

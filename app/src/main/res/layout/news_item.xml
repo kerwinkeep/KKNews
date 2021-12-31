@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                                    android:layout_width="match_parent"
-                                   android:layout_height="match_parent">
+                                   android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="112dp">
+        android:layout_height="90dp">
 
         <ImageView
             android:id="@+id/news_image"
             android:layout_width="96dp"
-            android:layout_height="64dp"
+            android:layout_height="74dp"
             android:layout_margin="8dp"
             android:scaleType="centerCrop" />
 
@@ -32,9 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/title_tv"
             android:layout_alignBottom="@id/news_image"
-            android:layout_marginBottom="8dp"
             android:textColor="@android:color/secondary_text_dark"
-            android:text="网易新闻"
             android:textSize="12sp" />
 
         <TextView
@@ -45,7 +44,6 @@
             android:layout_alignBaseline="@id/source_tv"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/source_tv"
-            android:text="2022-01-01 10:58"
             android:textColor="@android:color/secondary_text_dark"
             android:textSize="12sp" />
 
