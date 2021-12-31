@@ -1,18 +1,30 @@
 package com.kerwinkeep.kknews;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class News {
 
+    @Expose(serialize = false, deserialize = false)
+    @SerializedName("id")
     private String mId;
 
+    @SerializedName("ctime")
     private String mTime;
 
     @SerializedName("title")
     private String mTitle;
+
+    @SerializedName("description")
     private String mDescription;
+
+    @SerializedName("source")
     private String mSource;
+
+    @SerializedName("picUrl")
     private String mPicUri;
+
+    @SerializedName("url")
     private String mUri;
 
     public News(String mId, String mTime, String mTitle, String mDescription, String mSource, String mPicUri, String mUri) {
